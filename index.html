@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Infographics - Портфолио дизайнера инфографики</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+        
+        .dark-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            background-color: #1e293b;
+            border: 1px solid #334155;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border-color: #4f46e5;
+        }
+        
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 8px rgba(79, 70, 229, 0.6);
+        }
+        
+        .glow-border {
+            box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4f46e5;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e293b;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #4f46e5;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="dark-gradient">
+    <!-- Навигация -->
+    <nav class="bg-slate-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
+                        <i class="fas fa-chart-pie text-white"></i>
+                    </div>
+                    <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">DarkInfographics</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-slate-300 hover:text-white">Главная</a>
+                    <a href="#services" class="nav-link text-slate-300 hover:text-white">Услуги</a>
+                    <a href="#portfolio" class="nav-link text-slate-300 hover:text-white">Портфолио</a>
+                    <a href="#process" class="nav-link text-slate-300 hover:text-white">Процесс</a>
+                    <a href="#contact" class="nav-link text-slate-300 hover:text-white">Контакты</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="block py-2 text-slate-300 hover:text-white">Главная</a>
+                <a href="#services" class="block py-2 text-slate-300 hover:text-white">Услуги</a>
+                <a href="#portfolio" class="block py-2 text-slate-300 hover:text-white">Портфолио</a>
+                <a href="#process" class="block py-2 text-slate-300 hover:text-white">Процесс</a>
+                <a href="#contact" class="block py-2 text-slate-300 hover:text-white">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section id="home" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Продающие <span class="text-indigo-400 glow-text">инфографики</span> для маркетплейсов</h1>
+                    <p class="text-lg text-slate-300 mb-8">Создаю визуальные решения, которые увеличивают конверсию карточек товаров на Wildberries, Ozon и других площадках.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#portfolio" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition glow-border">Посмотреть работы</a>
+                        <a href="#contact" class="border border-indigo-600 text-indigo-400 hover:bg-indigo-900 hover:bg-opacity-30 px-6 py-3 rounded-lg font-medium transition">Обсудить проект</a>
+                    </div>
+                    <div class="mt-10 flex items-center space-x-6">
+                        <div class="flex -space-x-2">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400">Более <span class="font-bold text-white">50+ довольных</span> клиентов</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Дизайн инфографики" class="rounded-xl shadow-2xl floating max-w-full h-auto border border-slate-700">
+                        <div class="absolute -bottom-5 -right-5 bg-indigo-600 text-white p-4 rounded-lg shadow-lg glow-border">
+                            <p class="text-xl font-bold">+30-70%</p>
+                            <p class="text-sm">к конверсии</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-slate-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-medium mb-2 block">ЧТО Я ПРЕДЛАГАЮ</span>
+                <h2 class="text-3xl font-bold text-white mb-4">Мои услуги</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Специализированные решения для увеличения продаж на маркетплейсах</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card-hover p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-pie text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Инфографика для карточек</h3>
+                    <p class="text-slate-400 mb-4">Визуализация преимуществ товара, характеристик и отличий от конкурентов в формате инфографики.</p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Wildberries</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Ozon</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Яндекс.Маркета</li>
+                    </ul>
+                </div>
+                
+                <div class="card-hover p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-images text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Фотосъемка товаров</h3>
+                    <p class="text-slate-400 mb-4">Профессиональная предметная съемка с учетом требований маркетплейсов и трендов визуала.</p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Основное фото</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Дополнительные ракурсы</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Фото в использовании</li>
+                    </ul>
+                </div>
+                
+                <div class="card-hover p-8 rounded-xl">
+                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-ad text-indigo-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Рекламные креативы</h3>
+                    <p class="text-slate-400 mb-4">Создание баннеров и рекламных макетов для продвижения товаров на маркетплейсах.</p>
+                    <ul class="space-y-2 text-slate-400">
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для внутренней рекламы</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для внешних источников</li>
+                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для соцсетей</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-medium mb-2 block">МОИ РАБОТЫ</span>
+                <h2 class="text-3xl font-bold text-white mb-4">Портфолио</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Примеры работ, которые помогли клиентам увеличить продажи</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Портфолио элемент 1 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Инфографика" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Wildberries - Косметика</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика преимуществ косметического набора</p>
+                        <span class="text-indigo-400 font-medium">+47% к конверсии</span>
+                    </div>
+                </div>
+                
+                <!-- Портфолио элемент 2 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Карточка товара" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Ozon - Электроника</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Дизайн карточки беспроводных наушников</p>
+                        <span class="text-indigo-400 font-medium">+63% к CTR</span>
+                    </div>
+                </div>
+                
+                <!-- Портфолио элемент 3 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Рекламный макет" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Яндекс.Маркет - Детские товары</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика безопасности материалов</p>
+                        <span class="text-indigo-400 font-medium">+38% к продажам</span>
+                    </div>
+                </div>
+                
+                <!-- Портфолио элемент 4 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Инфографика" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Wildberries - Спортивные товары</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Сравнительная инфографика характеристик</p>
+                        <span class="text-indigo-400 font-medium">+55% к конверсии</span>
+                    </div>
+                </div>
+                
+                <!-- Портфолио элемент 5 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Карточка товара" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Ozon - Бытовая техника</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Визуализация функций мультиварки</p>
+                        <span class="text-indigo-400 font-medium">+42% к продажам</span>
+                    </div>
+                </div>
+                
+                <!-- Портфолио элемент 6 -->
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Рекламный макет" class="w-full h-full object-cover">
+                    <div class="portfolio-overlay">
+                        <h3 class="text-white text-xl font-bold mb-2">Яндекс.Маркет - Автотовары</h3>
+                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика совместимости аксессуаров</p>
+                        <span class="text-indigo-400 font-medium">+51% к конверсии</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium transition glow-border">Показать больше работ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section id="process" class="py-20 bg-slate-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-medium mb-2 block">КАК Я РАБОТАЮ</span>
+                <h2 class="text-3xl font-bold text-white mb-4">Процесс работы</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Четкий алгоритм взаимодействия для достижения максимального результата</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="card-hover p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-400 font-bold text-xl">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Обсуждение</h3>
+                    <p class="text-slate-400">Анализируем ваш товар, целевую аудиторию и конкурентов</p>
+                </div>
+                
+                <div class="card-hover p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-400 font-bold text-xl">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Концепция</h3>
+                    <p class="text-slate-400">Разрабатываю 2-3 варианта концепции инфографики</p>
+                </div>
+                
+                <div class="card-hover p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-400 font-bold text-xl">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Реализация</h3>
+                    <p class="text-slate-400">Создаю финальный дизайн на основе выбранной концепции</p>
+                </div>
+                
+                <div class="card-hover p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-indigo-400 font-bold text-xl">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Результат</h3>
+                    <p class="text-slate-400">Предоставляю готовые файлы в нужных форматах</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-indigo-400 font-medium mb-2 block">СВЯЖИТЕСЬ СО МНОЙ</span>
+                <h2 class="text-3xl font-bold text-white mb-4">Готовы обсудить проект?</h2>
+                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Оставьте заявку, и я свяжусь с вами в ближайшее время</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-slate-800 bg-opacity-50 rounded-xl p-8 border border-slate-700">
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2 font-medium text-slate-300">Ваше имя</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="Иван Иванов">
+                    </div>
+                    <div>
+                        <label for="email" class="block mb-2 font-medium text-slate-300">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="example@mail.com">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="platform" class="block mb-2 font-medium text-slate-300">Маркетплейс</label>
+                        <select id="platform" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white">
+                            <option value="" disabled selected>Выберите площадку</option>
+                            <option value="wildberries">Wildberries</option>
+                            <option value="ozon">Ozon</option>
+                            <option value="yandex">Яндекс.Маркет</option>
+                            <option value="other">Другая</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block mb-2 font-medium text-slate-300">Сообщение</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="Опишите ваш товар и пожелания к дизайну..."></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition glow-border">Отправить заявку</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
+                        <i class="fas fa-phone-alt text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Телефон</h3>
+                    <a href="tel:+79991234567" class="text-slate-400 hover:text-indigo-400 transition">+7 (999) 123-45-67</a>
+                </div>
+                <div>
+                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
+                        <i class="fas fa-envelope text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Email</h3>
+                    <a href="mailto:contact@darkinfographics.ru" class="text-slate-400 hover:text-indigo-400 transition">contact@darkinfographics.ru</a>
+                </div>
+                <div>
+                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
+                        <i class="fas fa-paper-plane text-indigo-400 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-2 text-white">Соцсети</h3>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-slate-900 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-chart-pie text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">DarkInfographics</span>
+                    </div>
+                    <p class="text-slate-500 mt-2 text-sm">Продающие визуальные решения для маркетплейсов</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="text-slate-500 hover:text-indigo-400 transition text-sm">Главная</a>
+                    <a href="#services" class="text-slate-500 hover:text-indigo-400 transition text-sm">Услуги</a>
+                    <a href="#portfolio" class="text-slate-500 hover:text-indigo-400 transition text-sm">Портфолио</a>
+                    <a href="#contact" class="text-slate-500 hover:text-indigo-400 transition text-sm">Контакты</a>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
+                <p>&copy; 2023 DarkInfographics. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Закрываем мобильное меню после клика
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Анимация при загрузке
+        window.addEventListener('load', () => {
+            const elements = document.querySelectorAll('.portfolio-item, .card-hover');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body>
+</html>
