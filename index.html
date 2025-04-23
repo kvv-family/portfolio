@@ -260,7 +260,7 @@
                 </div>
                 
                 <!-- Портфолио элемент 2 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-down">
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated zoom-card">
                     <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Карточка товара" class="w-full h-full object-cover">
                     <div class="portfolio-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Ozon - Электроника</h3>
@@ -290,7 +290,7 @@
                 </div>
                 
                 <!-- Портфолио элемент 5 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-up">
+                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated zoom-card">
                     <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Карточка товара" class="w-full h-full object-cover">
                     <div class="portfolio-overlay">
                         <h3 class="text-white text-xl font-bold mb-2">Ozon - Бытовая техника</h3>
@@ -494,60 +494,59 @@
                 }, 100 * index);
             });
         });
+        const checkEntry = (entry, className) => {
+            if (entry.isIntersecting) {
+                    entry.target.classList.add(className);
+                } else {
+                    entry.target.classList.remove(className);
+                }
+        }
         const observerFadein = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__fadeIn");
-                }
+                const className = "animate__fadeIn";
+                checkEntry(entry, className);
             });
         });
         const observerSlideInDown = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__slideInDown");
-                }
+                const className = "animate__slideInDown";
+                checkEntry(entry, className);
             });
         });
         const observerSlideInUp = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__slideInUp");
-                }
+                const className = "animate__slideInUp";
+                checkEntry(entry, className);
             });
         });
         const observerSlideInLeft = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__fadeInLeft");
-                }
+                const className = "animate__fadeInLeft";
+                checkEntry(entry, className);
             });
         });
         const observerSlideInRight = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__fadeInRight");
-                }
+                const className = "animate__fadeInRight";
+                checkEntry(entry, className);
             });
         });
         const observerFadeInDown = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__fadeInDown");
-                }
+                const className = "animate__fadeInDown";
+                checkEntry(entry, className);
             });
         });
         const observerFadeInUp = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__fadeInUp");
-                }
+                const className = "animate__fadeInUp";
+                checkEntry(entry, className);
             });
         });
         const observerZoomIn = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animate__zoomIn");
-                }
+                const className = "animate__zoomIn";
+                checkEntry(entry, className);
             });
         });
 
