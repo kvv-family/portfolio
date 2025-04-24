@@ -3,466 +3,749 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Дизайн инфографики для маркетплейсов (Wildberries, Ozon) | KVV Design</title>
-    <meta name="description" content="Профессиональный дизайн инфографики для Wildberries, Ozon и других маркетплейсов. Увеличиваю конверсию карточек товаров. Работаю быстро и в вашем стиле.">
-    <script src="lib/tailwindcss.js"></script>
-    <link rel="stylesheet" href="styles/all.min.css" />
-    <link rel="stylesheet" href="styles/animate.min.css" />
-    <link href="lib/fontawesome/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <!-- <script src="https://forms.yandex.ru/_static/embed.js"></script> -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    <title>Профессиональный дизайн инфографики для маркетплейсов</title>
+    <!-- <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
             scroll-behavior: smooth;
+            --first-color: #021b79;
+            --first-color-opacity: #021c7994;
+            --second-color: #0575e6;
+            --second-color-opacity: #0576e641;
+        }
+
+        .contact-button  {
+            background-color: var(--second-color);
         }
         
-        .dark-gradient {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-            background-color: #1e293b;
-            border: 1px solid #334155;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
-            border-color: #4f46e5;
+        .hero-gradient {
+            background: linear-gradient(to right, #021b79, #0575e6);
         }
         
         .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            border: 1px solid #334155;
+            transition: all 0.3s ease;
         }
         
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(15, 23, 42, 0.9);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
+        .tool-icon {
+            transition: all 0.3s ease;
         }
         
-        .glow-text {
-            text-shadow: 0 0 8px rgba(79, 70, 229, 0.6);
+        .tool-icon:hover {
+            transform: scale(1.1);
         }
         
-        .glow-border {
-            box-shadow: 0 0 15px rgba(79, 70, 229, 0.4);
+        .fade-in {
+            animation: fadeIn 1s ease-in;
         }
         
-        /* .floating {
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .floating {
             animation: floating 3s ease-in-out infinite;
-        } */
+        }
         
-        /* @keyframes floating {
+        @keyframes floating {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-15px); }
             100% { transform: translateY(0px); }
-        } */
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #4f46e5;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        
-        ::-webkit-scrollbar-track {
-            background: #1e293b;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-            background: #4f46e5;
-            border-radius: 4px;
         }
     </style>
 </head>
-<body class="dark-gradient">
+<body class="bg-gray-50">
     <!-- Навигация -->
-    <nav class="bg-slate-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-50 border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4">
+    <nav class="bg-white shadow-lg fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
-                        <i class="fas fa-chart-pie text-white"></i>
-                    </div>
-                    <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">KVV Design</span>
+                <div class="flex items-center space-x-4">
+                    <span class="text-2xl font-bold text-(--second-color)">InfographicPro</span>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-slate-300 hover:text-white">Главная</a>
-                    <a href="#services" class="nav-link text-slate-300 hover:text-white">Услуги</a>
-                    <a href="#portfolio" class="nav-link text-slate-300 hover:text-white">Портфолио</a>
-                    <a href="#process" class="nav-link text-slate-300 hover:text-white">Процесс</a>
-                    <a href="#contact" class="nav-link text-slate-300 hover:text-white">Контакты</a>
+                    <a href="#about" class="text-gray-700 hover:text-(--second-color) transition">Обо мне</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-(--second-color) transition">Портфолио</a>
+                    <a href="#services" class="text-gray-700 hover:text-(--second-color) transition">Услуги</a>
+                    <a href="#process" class="text-gray-700 hover:text-(--second-color) transition">Этапы работы</a>
+                    <a href="#contact" class="px-4 py-2 bg-(--second-color) text-white rounded-lg hover:bg-(--first-color) transition contact-button">Связаться</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
             </div>
         </div>
         <!-- Мобильное меню -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
-            <div class="px-4 py-3 space-y-3">
-                <a href="#home" class="block py-2 text-slate-300 hover:text-white">Главная</a>
-                <a href="#services" class="block py-2 text-slate-300 hover:text-white">Услуги</a>
-                <a href="#portfolio" class="block py-2 text-slate-300 hover:text-white">Портфолио</a>
-                <a href="#process" class="block py-2 text-slate-300 hover:text-white">Процесс</a>
-                <a href="#contact" class="block py-2 text-slate-300 hover:text-white">Контакты</a>
-            </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 shadow-lg">
+            <a href="#about" class="block py-2 text-gray-700 hover:text-(--second-color) transition">Обо мне</a>
+            <a href="#portfolio" class="block py-2 text-gray-700 hover:text-(--second-color) transition">Портфолио</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-(--second-color) transition">Услуги</a>
+            <a href="#process" class="block py-2 text-gray-700 hover:text-(--second-color) transition">Этапы работы</a>
+            <a href="#contact" class="block mt-2 px-4 py-2 bg-(--second-color) text-white rounded-lg hover:bg-blue-700 transition text-center">Связаться</a>
         </div>
     </nav>
 
-    <!-- Герой секция -->
-    <section id="home" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row gap-6 items-center justify-between">
-                <div class="md:w-1/2 mb-12 md:mb-0">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Продающие <span class="text-indigo-400 glow-text">инфографики</span> для маркетплейсов</h1>
-                    <p class="text-lg text-slate-300 mb-8">Создаю визуальные решения, которые увеличивают конверсию карточек товаров на Wildberries, Ozon и других площадках.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#portfolio" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition glow-border">Посмотреть работы</a>
-                        <a href="#contact" class="border border-indigo-600 text-indigo-400 hover:bg-indigo-900 hover:bg-opacity-30 px-6 py-3 rounded-lg font-medium transition">Обсудить проект</a>
-                    </div>
-                    <div class="mt-10 flex items-center space-x-6">
-                        <div class="flex -space-x-2">
-                            <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-10 h-10 rounded-full border-2 border-slate-800" alt="Клиент">
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-400">Более <span class="font-bold text-white">50+ довольных</span> клиентов</p>
-                        </div>
-                    </div>
+    <!-- Герой-блок -->
+    <section class="hero-gradient text-white pt-24 pb-20 md:pt-32 md:pb-28">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Профессиональный дизайн инфографики для маркетплейсов</h1>
+                <p class="text-xl mb-8 opacity-90">Превращаю сложные данные в понятные и продающие визуальные истории</p>
+                <div class="flex space-x-4">
+                    <a href="#portfolio" class="px-6 py-3 bg-white text-(--second-color) font-medium rounded-lg hover:bg-gray-100 transition">Посмотреть работы</a>
+                    <a href="#contact" class="px-6 py-3 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-(--second-color) transition">Обсудить проект</a>
                 </div>
-                <div class="md:w-1/2 flex justify-center">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Дизайн инфографики" class="rounded-xl shadow-2xl floating max-w-full h-auto border border-slate-700 animate__animated animate__pulse animate__infinite animate__slower">
-                        <div class="absolute -bottom-5 -right-5 bg-indigo-600 text-white p-4 rounded-lg shadow-lg glow-border">
-                            <p class="text-xl font-bold">+30-70%</p>
-                            <p class="text-sm">к конверсии</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="Инфографика" class="w-64 md:w-80 floating">
             </div>
         </div>
     </section>
 
-    <!-- Услуги -->
-    <section id="services" class="py-20 bg-slate-900 bg-opacity-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Обо мне -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-indigo-400 font-medium mb-2 block">ЧТО Я ПРЕДЛАГАЮ</span>
-                <h2 class="text-3xl font-bold text-white mb-4">Мои услуги</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Специализированные решения для увеличения продаж на маркетплейсах</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Обо мне</h2>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto"></div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="card-hover p-8 rounded-xl card-service animate__animated ">
-                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-pie text-indigo-400 text-2xl"></i>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden border-4 border-(--second-color-opacity)">
+                            <img src="img/veronika.jpg" alt="Фото дизайнера" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-lg">
+                            <div class="w-12 h-12 bg-(--second-color) rounded-full flex items-center justify-center">
+                                <i class="fas fa-pen-fancy text-white text-xl"></i>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Инфографика для карточек</h3>
-                    <p class="text-slate-400 mb-4">Визуализация преимуществ товара, характеристик и отличий от конкурентов в формате инфографики.</p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Wildberries</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Ozon</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для Яндекс.Маркета</li>
-                    </ul>
                 </div>
-                
-                <div class="card-hover p-8 rounded-xl card-service animate__animated ">
-                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-images text-indigo-400 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Фотосъемка товаров</h3>
-                    <p class="text-slate-400 mb-4">Профессиональная предметная съемка с учетом требований маркетплейсов и трендов визуала.</p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Основное фото</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Дополнительные ракурсы</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Фото в использовании</li>
-                    </ul>
-                </div>
-                
-                <div class="card-hover p-8 rounded-xl card-service animate__animated ">
-                    <div class="w-14 h-14 bg-indigo-900 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-ad text-indigo-400 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Рекламные креативы</h3>
-                    <p class="text-slate-400 mb-4">Создание баннеров и рекламных макетов для продвижения товаров на маркетплейсах.</p>
-                    <ul class="space-y-2 text-slate-400">
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для внутренней рекламы</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для внешних источников</li>
-                        <li class="flex items-center"><i class="fas fa-check text-indigo-400 mr-2"></i> Для соцсетей</li>
-                    </ul>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Привет, я Вероника — контент-мейкер</h3>
+                    <p class="text-gray-600 mb-6">Специализируюсь на создании визуально привлекательной и функциональной инфографики для маркетплейсов. Мои работы помогают продавцам эффективно презентовать товары, увеличивать конверсию и выделяться среди конкурентов.</p>
+                    <p class="text-gray-600 mb-6">Работала с такими платформами как Wildberries, Ozon, Яндекс.Маркет и другими.</p>
+                    <!-- <div class="flex flex-wrap gap-4">
+                        <div class="bg-blue-50 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle text-(--second-color) mr-2"></i>
+                            <span class="text-gray-700">500+ проектов</span>
+                        </div>
+                        <div class="bg-blue-50 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle text-(--second-color) mr-2"></i>
+                            <span class="text-gray-700">87% повторных клиентов</span>
+                        </div>
+                        <div class="bg-blue-50 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-check-circle text-(--second-color) mr-2"></i>
+                            <span class="text-gray-700">Средний рост продаж 35%</span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Портфолио -->
-    <section id="portfolio" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
-                <span class="text-indigo-400 font-medium mb-2 block">МОИ РАБОТЫ</span>
-                <h2 class="text-3xl font-bold text-white mb-4">Портфолио</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Примеры работ, которые помогли клиентам увеличить продажи</p>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Мои работы</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Примеры инфографики, которая увеличивает продажи и улучшает восприятие товара</p>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Портфолио элемент 1 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-left">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Инфографика" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Wildberries - Косметика</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика преимуществ косметического набора</p>
-                        <span class="text-indigo-400 font-medium">+47% к конверсии</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+                <!-- Пример работы 1 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Пример инфографики" class="w-full h-full object-cover transition duration-500 hover:scale-105">
                     </div>
-                </div>
-                
-                <!-- Портфолио элемент 2 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated zoom-card">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Карточка товара" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Ozon - Электроника</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Дизайн карточки беспроводных наушников</p>
-                        <span class="text-indigo-400 font-medium">+63% к CTR</span>
-                    </div>
-                </div>
-                
-                <!-- Портфолио элемент 3 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-right">
-                    <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Рекламный макет" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Яндекс.Маркет - Детские товары</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика безопасности материалов</p>
-                        <span class="text-indigo-400 font-medium">+38% к продажам</span>
-                    </div>
-                </div>
-                
-                <!-- Портфолио элемент 4 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-left">
-                    <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Инфографика" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Wildberries - Спортивные товары</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Сравнительная инфографика характеристик</p>
-                        <span class="text-indigo-400 font-medium">+55% к конверсии</span>
-                    </div>
-                </div>
-                
-                <!-- Портфолио элемент 5 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated zoom-card">
-                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Карточка товара" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Ozon - Бытовая техника</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Визуализация функций мультиварки</p>
-                        <span class="text-indigo-400 font-medium">+42% к продажам</span>
-                    </div>
-                </div>
-                
-                <!-- Портфолио элемент 6 -->
-                <div class="portfolio-item h-80 rounded-xl overflow-hidden animate__animated portfolio-item-right">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Рекламный макет" class="w-full h-full object-cover">
-                    <div class="portfolio-overlay">
-                        <h3 class="text-white text-xl font-bold mb-2">Яндекс.Маркет - Автотовары</h3>
-                        <p class="text-slate-300 text-center px-4 mb-4">Инфографика совместимости аксессуаров</p>
-                        <span class="text-indigo-400 font-medium">+51% к конверсии</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-3 rounded-lg font-medium transition glow-border">Показать больше работ</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Процесс работы -->
-    <section id="process" class="py-20 bg-slate-900 bg-opacity-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-indigo-400 font-medium mb-2 block">КАК Я РАБОТАЮ</span>
-                <h2 class="text-3xl font-bold text-white mb-4">Процесс работы</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Четкий алгоритм взаимодействия для достижения максимального результата</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="card-hover p-6 rounded-xl text-center zoom-card animate__animated">
-                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-indigo-400 font-bold text-xl">1</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Обсуждение</h3>
-                    <p class="text-slate-400">Анализируем ваш товар, целевую аудиторию и конкурентов</p>
-                </div>
-                
-                <div class="card-hover p-6 rounded-xl text-center zoom-card animate__animated">
-                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-indigo-400 font-bold text-xl">2</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Концепция</h3>
-                    <p class="text-slate-400">Разрабатываю 2-3 варианта концепции инфографики</p>
-                </div>
-                
-                <div class="card-hover p-6 rounded-xl text-center zoom-card animate__animated">
-                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-indigo-400 font-bold text-xl">3</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Реализация</h3>
-                    <p class="text-slate-400">Создаю финальный дизайн на основе выбранной концепции</p>
-                </div>
-                
-                <div class="card-hover p-6 rounded-xl text-center zoom-card animate__animated">
-                    <div class="w-16 h-16 bg-indigo-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-indigo-400 font-bold text-xl">4</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Результат</h3>
-                    <p class="text-slate-400">Предоставляю готовые файлы в нужных форматах</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-indigo-400 font-medium mb-2 block">СВЯЖИТЕСЬ СО МНОЙ</span>
-                <h2 class="text-3xl font-bold text-white mb-4">Готовы обсудить проект?</h2>
-                <p class="text-lg text-slate-400 max-w-2xl mx-auto">Оставьте заявку, и я свяжусь с вами в ближайшее время</p>
-            </div>
-
-            <!-- <div class="max-w-3xl mx-auto bg-slate-800 bg-opacity-50 rounded-xl p-8 border border-slate-700 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <iframe src="https://forms.yandex.ru/u/6808f5bfeb614665b61170aa/?iframe=1" frameborder="0" name="ya-form-6808f5bfeb614665b61170aa" width="650"></iframe>
-            </div> -->
-            
-            <div class="max-w-3xl mx-auto bg-slate-800 bg-opacity-50 rounded-xl p-8 border border-slate-700">
-                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <label for="name" class="block mb-2 font-medium text-slate-300">Ваше имя</label>
-                        <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="Иван Иванов">
-                    </div>
-                    <div>
-                        <label for="email" class="block mb-2 font-medium text-slate-300">Email</label>
-                        <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="example@mail.com">
-                    </div>
-                    <div class="md:col-span-2">
-                        <label for="platform" class="block mb-2 font-medium text-slate-300">Маркетплейс</label>
-                        <select id="platform" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white">
-                            <option value="" disabled selected>Выберите площадку</option>
-                            <option value="wildberries">Wildberries</option>
-                            <option value="ozon">Ozon</option>
-                            <option value="yandex">Яндекс.Маркет</option>
-                            <option value="other">Другая</option>
-                        </select>
-                    </div>
-                    <div class="md:col-span-2">
-                        <label for="message" class="block mb-2 font-medium text-slate-300">Сообщение</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-slate-700 border border-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-white placeholder-slate-500" placeholder="Опишите ваш товар и пожелания к дизайну..."></textarea>
-                    </div>
-                    <div class="md:col-span-2">
-                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-medium transition glow-border">Отправить заявку</button>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div>
-                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
-                        <i class="fas fa-phone-alt text-indigo-400 text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2 text-white">Телефон</h3>
-                    <a href="tel:+79991234567" class="text-slate-400 hover:text-indigo-400 transition">+7 (999) 123-45-67</a>
-                </div>
-                <div>
-                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
-                        <i class="fas fa-envelope text-indigo-400 text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2 text-white">Email</h3>
-                    <a href="mailto:contact@darkinfographics.ru" class="text-slate-400 hover:text-indigo-400 transition">contact@darkinfographics.ru</a>
-                </div>
-                <div>
-                    <div class="w-16 h-16 bg-indigo-900 bg-opacity-50 rounded-full flex items-center justify-center mx-auto mb-4 border border-indigo-800">
-                        <i class="fas fa-paper-plane text-indigo-400 text-xl"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mb-2 text-white">Соцсети</h3>
-                    <div class="flex justify-center space-x-4">
-                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-telegram"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-behance"></i></a>
-                        <a href="#" class="text-slate-400 hover:text-indigo-400 transition text-xl"><i class="fab fa-dribbble"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Футер -->
-    <footer class="bg-slate-900 py-8 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <div class="flex items-center space-x-2">
-                        <div class="w-8 h-8 bg-indigo-600 rounded-full flex items-center justify-center">
-                            <i class="fas fa-chart-pie text-white"></i>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Инфографика для косметики</h3>
+                        <p class="text-gray-600 mb-4">Комплексная презентация линейки уходовой косметики для Wildberries</p>
+                        <div class="flex justify-between items-center">
+                            <button  class="text-(--second-color) hover:text-blue-800 flex items-center cursor-pointer">
+                                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
                         </div>
-                        <span class="text-xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">DarkInfographics</span>
                     </div>
-                    <p class="text-slate-500 mt-2 text-sm">Продающие визуальные решения для маркетплейсов</p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#home" class="text-slate-500 hover:text-indigo-400 transition text-sm">Главная</a>
-                    <a href="#services" class="text-slate-500 hover:text-indigo-400 transition text-sm">Услуги</a>
-                    <a href="#portfolio" class="text-slate-500 hover:text-indigo-400 transition text-sm">Портфолио</a>
-                    <a href="#contact" class="text-slate-500 hover:text-indigo-400 transition text-sm">Контакты</a>
+                
+                <!-- Пример работы 2 -->
+                <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="img/examples/rich/автодержатель.webp" alt="Пример инфографики" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">RICH контент</h3>
+                        <p class="text-gray-600 mb-4">Серия инфографик для электроники с акцентом на преимущества</p>
+                        <div class="flex justify-between items-center">
+                            <button data-modal-target="example-modal-1" data-modal-toggle="example-modal-1" class="text-(--second-color) hover:text-blue-800 flex items-center cursor-pointer">
+                                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Пример работы 3 -->
+                <!-- <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Пример инфографики" class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Сравнительные таблицы для Amazon</h3>
+                        <p class="text-gray-600 mb-4">Визуализация характеристик товаров в конкурентной нише</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Ноябрь 2022</span>
+                            <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center">
+                                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            
+            <!-- <div class="text-center">
+                <a href="#" class="inline-block px-6 py-3 border-2 border-(--second-color) text-(--second-color) font-medium rounded-lg hover:bg-(--first-color) hover:text-white transition">
+                    Смотреть все работы <i class="fas fa-images ml-2"></i>
+                </a>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Мои услуги</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Комплексные решения для эффективного представления товаров на маркетплейсах</p>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Услуга 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-image text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Оформление карточек товаров</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Главное изображение товара</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Внутренние слайды</span>
+                        </li>
+                    </ul>
+                    <div class="text-(--second-color) font-semibold">От 5 000 ₽</div>
+                </div>
+                
+                <!-- Услуга 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-invoice text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">RICH-контент</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Главное изображение товара</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Дополнительные ракурсы</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Фоны и контекст использования</span>
+                        </li>
+                    </ul>
+                    <div class="text-(--second-color) font-semibold">От 3 000 ₽</div>
+                </div>
+                
+                <!-- Услуга 3 -->
+                <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-magnifying-glass-chart text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Аналитика</h3>
+                    <ul class="space-y-3 text-gray-600 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Анализ конкурентов</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Подбор референсов для каждого слайда</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span>Выявление проблем целевой аудитории</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <span> Формулировку преимуществ товара на основе выявленных проблем</span>
+                        </li>
+                    </ul>
+                    <div class="text-(--second-color) font-semibold">От 10 000 ₽</div>
                 </div>
             </div>
-            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500 text-sm">
-                <p>&copy; 2023 DarkInfographics. Все права защищены.</p>
+        </div>
+    </section>
+
+    <!-- Этапы работы -->
+    <section id="process" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Как я работаю</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Четкий процесс, который гарантирует результат и экономит ваше время</p>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
+            </div>
+
+            <div class="w-3/4 m-auto">
+                <ol class="relative border-s border-gray-200">                  
+                    <li class="mb-2 ms-6 ">            
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            1
+                        </span>
+                        <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900">Обсуждение проекта</h3>
+                        <p class="mb-4 text-base font-normal text-gray-500">Анализируем ваш товар, целевую аудиторию, конкурентов, техническое задание. Отправляете исходные фотографии товара в хорошем качестве и ваши пожелания по дизайну.</p>
+                    </li>
+                    <li class="mb-2 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            2
+                        </span>
+                        <h3 class="mb-1 text-lg font-semibold text-gray-900">Стоимость услуг</h3>
+                        <p class="text-base font-normal text-gray-500">Обсуждаем стоимость всего заказа, сроки и оплачиваете 50% предоплаты (в зависимости от объёма заказа). 100% оплата - при заказе только 1 слайда. Бронирую даты и приступаю к работе в оговоренные сроки.</p>
+                    </li>
+                    <li class="mb-2 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            3
+                        </span>
+                        <h3 class="mb-1 text-lg font-semibold text-gray-900">Разработка концепции</h3>
+                        <p class="text-base font-normal text-gray-500">Анализирую ваших конкурентов на маркетплейсе, выявляю проблемы целевой аудитории, формулирую преимущества товара на основе выявленных проблем. Подбираю референсы для дизайна, выбираем оптимальный вариант визуализации данных и стиль оформления. Отправляю файл Google-таблицы вам на согласование, после внесения соответствующих, корректировок утверждаем техническое задание. Приступаю к дизайну. Последующие изменения в техническое задание после его утверждения вносятся за дополнительную плату. </p>
+                    </li>
+                    <li class="mb-2 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            4
+                        </span>
+                        <h3 class="mb-1 text-lg font-semibold text-gray-900">Создание дизайна (обложка)</h3>
+                        <p class="text-base font-normal text-gray-500">Разрабатываю дизайн обложки товара на основе технического задания и оговоренных пожеланий. Отправляю файл вам в формате PHG, JPEG для внесения правок и утверждения.</p>
+                    </li>
+                    <li class="mb-2 ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            5
+                        </span>
+                        <h3 class="mb-1 text-lg font-semibold text-gray-900">Создание дизайна (внутренние слайды)</h3>
+                        <p class="text-base font-normal text-gray-500">Разрабатываю дизайн внутренних слайдов на основе технического задания и оговоренных пожеланий. Отправляю файлы вам в формате PHG, JPEG для правок и утверждения. </p>
+                    </li>
+                    <li class="ms-6">
+                        <span class="absolute flex items-center justify-center w-6 h-6 bg-(--second-color) rounded-full -start-3 ring-8 ring-white">
+                            6
+                        </span>
+                        <h3 class="mb-1 text-lg font-semibold text-gray-900">Оплата</h3>
+                        <p class="text-base font-normal text-gray-500">Оплачиваете оставшуюся часть работы.</p>
+                    </li>
+                </ol>
+            </div>
+            
+            <!-- <div class="relative">
+                <div class="hidden md:block absolute left-1/2 top-0 h-full w-1 bg-blue-100 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">1</div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Обсуждение проекта</h3>
+                                </div>
+                                <p class="text-gray-600">Анализируем ваш товар, целевую аудиторию, конкурентов, техническое задание. Отправляете исходные фотографии товара в хорошем качестве и ваши пожелания по дизайну.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3594/3594466.png" alt="Обсуждение" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">2</div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Стоимость услуг</h3>
+                                </div>
+                                <p class="text-gray-600">Обсуждаем стоимость всего заказа, сроки и оплачиваете 50% предоплаты (в зависимости от объёма заказа). 100% оплата - при заказе только 1 слайда. Бронирую даты и приступаю к работе в оговоренные сроки.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Концепция" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">3</div>
+                                    <h3 class="text-xl font-semibold text-gray-800"> Разработка концепции</h3>
+                                </div>
+                                <p class="text-gray-600">Анализирую ваших конкурентов на маркетплейсе, выявляю проблемы целевой аудитории, формулирую преимущества товара на основе выявленных проблем. Подбираю референсы для дизайна, выбираем оптимальный вариант визуализации данных и стиль оформления. Отправляю файл Google-таблицы вам на согласование, после внесения соответствующих, корректировок утверждаем техническое задание. Приступаю к дизайну. Последующие изменения в техническое задание после его утверждения вносятся за дополнительную плату. </p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="Дизайн" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+                    
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">4</div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Создание дизайна (обложка)</h3>
+                                </div>
+                                <p class="text-gray-600">Разрабатываю дизайн обложки товара на основе технического задания и оговоренных пожеланий. Отправляю файл вам в формате PHG, JPEG для внесения правок и утверждения.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Корректировки" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">5</div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Создание дизайна (внутренние слайды)</h3>
+                                </div>
+                                <p class="text-gray-600">Разрабатываю дизайн внутренних слайдов на основе технического задания и оговоренных пожеланий. Отправляю файлы вам в формате PHG, JPEG для правок и утверждения. </p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3242/3242257.png" alt="Дизайн" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center md:even:flex-row-reverse">
+                        <div class="md:w-1/2 mb-6 md:mb-0 md:px-8">
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex items-center gap-2 mb-4">
+                                    <div class="max-w-10 min-w-10 min-h-10 w-10 max-h-10 h-10 bg-(--second-color) rounded-full flex items-center justify-center text-white font-bold mr-4">6</div>
+                                    <h3 class="text-xl font-semibold text-gray-800">Оплата</h3>
+                                </div>
+                                <p class="text-gray-600">Оплачиваете оставшуюся часть работы.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:px-8 flex justify-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Корректировки" class="w-40 h-40 object-contain">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Сертификаты -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Мои сертификаты</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Постоянно повышаю квалификацию, чтобы предлагать вам лучшие решения</p>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Сертификат 1 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Профессиональный дизайн инфографики</h3>
+                        <p class="text-gray-600 mb-4">Школа дизайна XYZ, 2022</p>
+                        <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
+                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Сертификат 2 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Визуализация данных</h3>
+                        <p class="text-gray-600 mb-4">Coursera, 2021</p>
+                        <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
+                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Сертификат 3 -->
+                <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">UX/UI для маркетплейсов</h3>
+                        <p class="text-gray-600 mb-4">Skillbox, 2020</p>
+                        <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
+                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подробнее обо мне -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <div class="relative">
+                        <img src="img/veronika.jpg" alt="Фото дизайнера" class="w-full rounded-xl shadow-2xl max-w-md mx-auto">
+                        <!-- <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
+                            <div class="text-4xl font-bold text-(--second-color)">5+</div>
+                            <div class="text-gray-600">лет опыта</div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Подробнее обо мне</h2>
+                    <p class="text-gray-600 mb-6">Меня зовут Анна, я профессиональный дизайнер инфографики с более чем 5-летним опытом работы. Специализируюсь на создании визуальных решений для маркетплейсов, которые помогают продавцам увеличивать конверсию и выделяться среди конкурентов.</p>
+                    <p class="text-gray-600 mb-8">Моя цель — превращать сложные данные и характеристики товаров в понятные, привлекательные и продающие визуальные истории. Я убеждена, что хорошая инфографика может значительно повысить эффективность карточки товара.</p>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Инструменты, которые я использую:</h3>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Figma" class="h-10 mb-2">
+                            <span class="text-xs text-gray-600">Figma</span>
+                        </div>
+                        <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png" alt="Adobe Photoshop" class="h-10 mb-2">
+                            <span class="text-xs text-gray-600">Photoshop</span>
+                        </div>
+                        <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968472.png" alt="Adobe Illustrator" class="h-10 mb-2">
+                            <span class="text-xs text-gray-600">Illustrator</span>
+                        </div>
+                        <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
+                            <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="Canva" class="h-10 mb-2">
+                            <span class="text-xs text-gray-600">Canva</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="px-6 py-3 bg-(--second-color) text-white font-medium rounded-lg hover:bg-(--first-color) transition inline-flex items-center">
+                        Начать проект <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратной связи -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Готовы обсудить проект?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Заполните форму ниже, и я свяжусь с вами в ближайшее время для обсуждения деталей</p>
+                <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
+            </div>
+            
+            <form class="bg-gray-50 rounded-xl p-8 shadow-md">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:border-transparent" placeholder="Иван Иванов">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:border-transparent" placeholder="example@mail.com">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="subject" class="block text-gray-700 font-medium mb-2">Тема сообщения</label>
+                    <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:border-transparent" placeholder="Например: Инфографика для Wildberries">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 font-medium mb-2">Сообщение</label>
+                    <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:border-transparent" placeholder="Опишите ваш товар и пожелания к дизайну"></textarea>
+                </div>
+                <div class="mb-6">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 text-(--second-color) rounded focus:ring-blue-500">
+                        <span class="ml-2 text-gray-700">Я согласен на обработку персональных данных</span>
+                    </label>
+                </div>
+                <button type="submit" class="w-full px-6 py-4 bg-(--second-color) text-white font-medium rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:ring-opacity-50">
+                    Отправить сообщение <i class="fas fa-paper-plane ml-2"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Контакты и подвал -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-6">InfographicPro</h3>
+                    <p class="text-gray-400">Профессиональный дизайн инфографики для маркетплейсов. Визуальные решения, которые увеличивают продажи.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Контакты</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-400 mt-1 mr-3"></i>
+                            <a href="tel:+79991234567" class="text-gray-400 hover:text-white transition">+7 (999) 123-45-67</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
+                            <a href="mailto:info@infographicpro.ru" class="text-gray-400 hover:text-white transition">info@infographicpro.ru</a>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <span class="text-gray-400">Москва, ул. Примерная, 12</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Соцсети</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Рабочие часы</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex justify-between">
+                            <span>Пн-Пт</span>
+                            <span>10:00 - 19:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Сб</span>
+                            <span>11:00 - 16:00</span>
+                        </li>
+                        <li class="flex justify-between">
+                            <span>Вс</span>
+                            <span>Выходной</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 InfographicPro. Все права защищены.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Условия использования</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <div id="example-modal-1" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-7xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow-sm">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600 border-gray-200">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        RICH контент
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center cursor-pointer" data-modal-hide="example-modal-1">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div id="default-carousel" class="relative w-full" data-carousel="static">
+                        <!-- Carousel wrapper -->
+                        <div class="relative overflow-hidden rounded-lg h-[calc(100dvh-15rem)]">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out overflow-auto" data-carousel-item>
+                                <!-- <img src="img/examples/rich/автодержатель.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> -->
+                                <img src="img/examples/rich/автодержатель.webp" class="" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out overflow-auto" data-carousel-item>
+                                <img src="img/examples/rich/grinder.webp" class="" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out overflow-auto" data-carousel-item>
+                                <img src="img/examples/rich/микрофон.webp" class="" alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-(--second-color) group-hover:bg-(--first-color) group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-(--second-color) group-hover:bg-(--first-color) group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <!-- <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide="example-modal-1" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-hide="example-modal-1" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
     <script>
         // Мобильное меню
-        
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         
@@ -470,119 +753,39 @@
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Плавная прокрутка
+        // Плавная прокрутка для всех ссылок
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
                 
-                // Закрываем мобильное меню после клика
-                mobileMenu.classList.add('hidden');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Закрываем мобильное меню, если оно открыто
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Прокрутка с учетом фиксированного хедера
+                    const headerHeight = document.querySelector('nav').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
         
         // Анимация при загрузке
-        window.addEventListener('load', () => {
-            const elements = document.querySelectorAll('.portfolio-item, .card-hover');
-            elements.forEach((el, index) => {
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, 100 * index);
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(el => {
+                el.style.opacity = '1';
             });
         });
-        const checkEntry = (entry, className) => {
-            if (entry.isIntersecting) {
-                    entry.target.classList.add(className);
-                } else {
-                    entry.target.classList.remove(className);
-                }
-        }
-        const observerFadein = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__fadeIn";
-                checkEntry(entry, className);
-            });
-        });
-        const observerSlideInDown = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__slideInDown";
-                checkEntry(entry, className);
-            });
-        });
-        const observerSlideInUp = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__slideInUp";
-                checkEntry(entry, className);
-            });
-        });
-        const observerSlideInLeft = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__fadeInLeft";
-                checkEntry(entry, className);
-            });
-        });
-        const observerSlideInRight = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__fadeInRight";
-                checkEntry(entry, className);
-            });
-        });
-        const observerFadeInDown = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__fadeInDown";
-                checkEntry(entry, className);
-            });
-        });
-        const observerFadeInUp = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__fadeInUp";
-                checkEntry(entry, className);
-            });
-        });
-        const observerZoomIn = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const className = "animate__zoomIn";
-                checkEntry(entry, className);
-            });
-        });
-
-        const animated = {
-            ".card-service": "fadeIn",
-            ".portfolio-item-down": "fadeInDown",
-            ".portfolio-item-up": "fadeInUp",
-            ".portfolio-item-left": "slideInLeft",
-            ".portfolio-item-right": "slideInRight",
-            ".zoom-card": "zoomIn"
-        }
-        Object.keys(animated).forEach(el => {
-            const elements = document.querySelectorAll(el);
-            const className = animated[el];
-            let observer = null;
-            if (className === "fadeIn") {
-                observer = observerFadein;
-            } else if (className === "slideInDown") {
-                observer = observerSlideInDown;                
-            } else if (className === "slideInUp") {
-                observer = observerSlideInUp;
-            } else if (className === "slideInLeft") {
-                observer = observerSlideInLeft;
-            } else if (className === "slideInRight") {
-                observer = observerSlideInRight;
-            } else if (className === "fadeInUp") {
-                observer = observerFadeInUp;
-            } else if (className === "fadeInDown") {
-                observer = observerFadeInDown;
-            } else if (className === "zoomIn") {
-                observer = observerZoomIn;
-            }
-            elements.forEach(el => observer.observe(el));
-        })
-        
     </script>
-    <script src="main.js" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </body>
 </html>
