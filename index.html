@@ -68,6 +68,30 @@
             100% { transform: translateY(0px); }
         }
     </style>
+    <script type="text/javascript" async="async">
+      (function () {
+    function init() {
+          const scr = document.createElement("script");
+          scr.type = "text/javascript";
+          scr.async = "async";
+          scr.src = "//cdn.qform.io/forms.js?v=" + new Date().getTime();
+          scr.charset="UTF-8";
+          const scrInsert = document.getElementsByTagName("script")[0];
+          scrInsert.parentNode.insertBefore(scr, scrInsert);
+        }
+        const d = document;
+        const w = window;
+        if (d.readyState === "interactive") {
+          init();
+        } else {
+          if (w.attachEvent) {
+    w.attachEvent("onload", init);
+          } else {
+    w.addEventListener("DOMContentLoaded", init, false);
+          }
+        }
+      })();
+    </script>
 </head>
 <body class="bg-gray-50">
     <!-- Навигация -->
@@ -197,7 +221,7 @@
                 <!-- Пример работы 2 -->
                 <div class="portfolio-item bg-white rounded-xl overflow-hidden shadow-md">
                     <div class="h-48 overflow-hidden">
-                        <img src="img/examples/rich/автодержатель-crop.webp" alt="Пример rich контента" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
+                        <img src="img/examples/rich/rich-preview.webp" alt="Пример rich контента" class="w-full h-full object-cover transition duration-500 hover:scale-105" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">RICH-контент</h3>
@@ -689,7 +713,8 @@
                 <div class="w-20 h-1 bg-(--second-color) mx-auto mt-4"></div>
             </div>
             
-            <form class="bg-gray-50 rounded-xl p-8 shadow-md">
+            <div data-formid="form_Hezjn3Qv8tsJGQsPdZ38sOvXWa4e0HSl"></div>
+            <!-- <form class="bg-gray-50 rounded-xl p-8 shadow-md">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                         <label for="name" class="block text-gray-700 font-medium mb-2">Ваше имя</label>
@@ -719,7 +744,7 @@
                         <path fill-rule="evenodd" d="M12 2a1 1 0 0 1 .932.638l7 18a1 1 0 0 1-1.326 1.281L13 19.517V13a1 1 0 1 0-2 0v6.517l-5.606 2.402a1 1 0 0 1-1.326-1.281l7-18A1 1 0 0 1 12 2Z" clip-rule="evenodd"/>
                     </svg>
                 </button>
-            </form>
+            </form> -->
         </div>
     </section>
 
