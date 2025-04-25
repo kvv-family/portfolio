@@ -9,7 +9,8 @@
     <link href="styles/flowbite.min.css" rel="stylesheet" />
 
     <script src="lib/tailwindcss.js"></script>
-    <link rel="stylesheet" href="lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/v4-shims.min.css">
+    <!-- <link rel="stylesheet" href="lib/fontawesome/css/solid.min.css"> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
         
@@ -83,8 +84,10 @@
                     <a href="#contact" class="px-4 py-2 bg-(--second-color) text-white rounded-lg hover:bg-(--first-color) transition contact-button">Связаться</a>
                 </div>
                 <div class="md:hidden">
-                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none cursor-pointer">
+                        <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -111,7 +114,7 @@
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="img/3242257.webp" alt="Инфографика" class="w-64 md:w-80 floating" loading="lazy">
+                <img src="img/3242257.webp" alt="Инфографика" class="w-64 md:w-80 floating">
             </div>
         </div>
     </section>
@@ -131,7 +134,10 @@
                         </div>
                         <div class="absolute -bottom-4 -right-4 bg-white p-3 rounded-full shadow-lg">
                             <div class="w-12 h-12 bg-(--second-color) rounded-full flex items-center justify-center">
-                                <i class="fas fa-palette text-white text-xl"></i>
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path fill-rule="evenodd" d="M8.649 2.577A10.004 10.004 0 0 1 20.344 6.49a9.995 9.995 0 0 1 1.2 8.486l-.004.01-.005.015a2.958 2.958 0 0 1-2.836 2.001h-2.69a1.037 1.037 0 0 0-.95.68c-.047.13-.068.27-.06.409v.916A3.01 3.01 0 0 1 11.96 22a9.626 9.626 0 0 1-4.195-1l.009.005-.018-.009.01.004a10.1 10.1 0 0 1-5.716-7.996l-.001-.012a9.992 9.992 0 0 1 6.6-10.415Zm3.35 3.429a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2H12ZM8.53 7.518a1 1 0 0 0 0 2h.01a1 1 0 1 0 0-2h-.01Zm6.968 0a1 1 0 1 0 0 2h.01a1 1 0 1 0 0-2h-.01ZM6.99 11.004a1 1 0 1 0 0 2H7a1 1 0 1 0 0-2h-.01Z" clip-rule="evenodd"/>
+                                </svg>
+
                             </div>
                         </div>
                     </div>
@@ -179,7 +185,9 @@
                         <!-- <p class="text-gray-600 mb-4">Комплексная презентация линейки уходовой косметики для Wildberries</p> -->
                         <div class="flex justify-between items-center">
                             <button  class="text-(--second-color) hover:text-blue-800 flex items-center cursor-pointer">
-                                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                                Подробнее <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -195,7 +203,9 @@
                         <!-- <p class="text-gray-600 mb-4">Серия инфографик для электроники с акцентом на преимущества</p> -->
                         <div class="flex justify-between items-center">
                             <button data-modal-target="example-modal-1" data-modal-toggle="example-modal-1" class="text-(--second-color) hover:text-blue-800 flex items-center cursor-pointer">
-                                Подробнее <i class="fas fa-arrow-right ml-2"></i>
+                                Подробнее <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                                </svg>
                             </button>
                         </div>
                     </div>
@@ -240,16 +250,23 @@
                 <!-- Услуга 1 -->
                 <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
                     <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-image text-2xl"></i>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m3 16 5-7 6 6.5m6.5 2.5L16 13l-4.286 6M14 10h.01M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Оформление карточек товаров</h3>
                     <ul class="space-y-3 text-gray-600 mb-6">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
+
                             <span>Главное изображение товара</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Внутренние слайды</span>
                         </li>
                     </ul>
@@ -259,16 +276,22 @@
                 <!-- Услуга 2 -->
                 <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
                     <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-file-invoice text-2xl"></i>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 3v4a1 1 0 0 1-1 1H5m4 10v-2m3 2v-6m3 6v-3m4-11v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7.914a1 1 0 0 1 .293-.707l3.914-3.914A1 1 0 0 1 9.914 3H18a1 1 0 0 1 1 1Z"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">RICH-контент</h3>
                     <ul class="space-y-3 text-gray-600 mb-6">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Ozon</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Wildberries</span>
                         </li>
                     </ul>
@@ -278,24 +301,34 @@
                 <!-- Услуга 3 -->
                 <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
                     <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-magnifying-glass-chart text-2xl"></i>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15v4m6-6v6m6-4v4m6-6v6M3 11l6-5 6 5 5.5-5.5"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Аналитика</h3>
                     <ul class="space-y-3 text-gray-600 mb-6">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Анализ конкурентов</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Подбор референсов для каждого слайда</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Выявление проблем целевой аудитории</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="min-w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span> Формулировку преимуществ товара на основе выявленных проблем</span>
                         </li>
                     </ul>
@@ -304,16 +337,22 @@
                 <!-- Услуга 4 -->
                 <div class="bg-gray-50 rounded-xl p-8 transition-all hover:shadow-lg hover:-translate-y-2">
                     <div class="w-16 h-16 bg-(--second-color) text-white rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-video text-2xl"></i>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M14 7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7Zm2 9.387 4.684 1.562A1 1 0 0 0 22 17V7a1 1 0 0 0-1.316-.949L16 7.613v8.774Z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Видео</h3>
                     <ul class="space-y-3 text-gray-600 mb-6">
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="min-w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Монтаж видео</span>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-check text-(--second-color) mt-1 mr-2"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11.917 9.724 16.5 19 7.5"/>
+                            </svg>
                             <span>Создание видеообложки</span>
                         </li>
                     </ul>
@@ -489,14 +528,18 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Сертификат 1 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                    <div class="h-48 bg-(--second-color) flex items-center justify-center">
+                        <svg class="text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7Z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Профессиональный дизайн инфографики</h3>
                         <p class="text-gray-600 mb-4">Школа дизайна XYZ, 2022</p>
                         <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
-                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                            Посмотреть сертификат <svg class="w-4 h-4 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -504,13 +547,17 @@
                 <!-- Сертификат 2 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
                     <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                        <svg class="text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7Z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">Визуализация данных</h3>
                         <p class="text-gray-600 mb-4">Coursera, 2021</p>
                         <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
-                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                            Посмотреть сертификат <svg class="w-4 h-4 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -518,13 +565,17 @@
                 <!-- Сертификат 3 -->
                 <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
                     <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-certificate text-(--second-color) text-6xl"></i>
+                        <svg class="text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor" viewBox="0 0 24 24">
+                            <path fill-rule="evenodd" d="M9 2.221V7H4.221a2 2 0 0 1 .365-.5L8.5 2.586A2 2 0 0 1 9 2.22ZM11 2v5a2 2 0 0 1-2 2H4v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7Z" clip-rule="evenodd"/>
+                        </svg>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-gray-800 mb-2">UX/UI для маркетплейсов</h3>
                         <p class="text-gray-600 mb-4">Skillbox, 2020</p>
                         <a href="#" class="text-(--second-color) hover:text-blue-800 flex items-center text-sm">
-                            Посмотреть сертификат <i class="fas fa-external-link-alt ml-2"></i>
+                            Посмотреть сертификат <svg class="w-4 h-4 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.213 9.787a3.391 3.391 0 0 0-4.795 0l-3.425 3.426a3.39 3.39 0 0 0 4.795 4.794l.321-.304m-.321-4.49a3.39 3.39 0 0 0 4.795 0l3.424-3.426a3.39 3.39 0 0 0-4.794-4.795l-1.028.961"/>
+                            </svg>
                         </a>
                     </div>
                 </div>
@@ -568,25 +619,27 @@
                     <h3 class="text-xl font-semibold text-gray-800 mb-4">Инструменты, которые я использую:</h3>
                     <div class="flex flex-wrap gap-4 mb-8">
                         <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
-                            <img src="img/figma.svg" alt="Figma icon" class="h-10 mb-2" loading="lazy">
+                            <img src="img/icons/figma.svg" alt="Figma icon" class="h-10 mb-2" loading="lazy">
                             <span class="text-xs text-gray-600">Figma</span>
                         </div>
                         <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
-                            <img src="img/photoshop.svg" alt="Adobe Photoshop icon" class="h-10 mb-2" loading="lazy">
+                            <img src="img/icons/photoshop.svg" alt="Adobe Photoshop icon" class="h-10 mb-2" loading="lazy">
                             <span class="text-xs text-gray-600">Photoshop</span>
                         </div>
                         <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
-                            <img src="img/illustrator.svg" alt="Adobe Illustrator icon" class="h-10 mb-2" loading="lazy">
+                            <img src="img/icons/illustrator.svg" alt="Adobe Illustrator icon" class="h-10 mb-2" loading="lazy">
                             <span class="text-xs text-gray-600">Illustrator</span>
                         </div>
                         <div class="tool-icon bg-white p-4 rounded-lg shadow-md flex flex-col items-center w-24">
-                            <img src="img/canva.svg" alt="Canva icon" class="h-10 mb-2" loading="lazy">
+                            <img src="img/icons/canva.svg" alt="Canva icon" class="h-10 mb-2" loading="lazy">
                             <span class="text-xs text-gray-600">Canva</span>
                         </div>
                     </div>
                     
                     <a href="#contact" class="px-6 py-3 bg-(--second-color) text-white font-medium rounded-lg hover:bg-(--first-color) transition inline-flex items-center">
-                        Начать проект <i class="fas fa-arrow-right ml-2"></i>
+                        Начать проект <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 12H5m14 0-4 4m4-4-4-4"/>
+                        </svg>
                     </a>
                 </div>
             </div>
@@ -627,8 +680,10 @@
                         <span class="ml-2 text-gray-700">Я согласен на обработку персональных данных</span>
                     </label>
                 </div>
-                <button type="submit" class="w-full px-6 py-4 bg-(--second-color) text-white font-medium rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:ring-opacity-50">
-                    Отправить сообщение <i class="fas fa-paper-plane ml-2"></i>
+                <button type="submit" class=" flex items-center justify-center w-full px-6 py-4 bg-(--second-color) text-white font-medium rounded-lg hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-(--second-color) focus:ring-opacity-50">
+                    Отправить сообщение <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M12 2a1 1 0 0 1 .932.638l7 18a1 1 0 0 1-1.326 1.281L13 19.517V13a1 1 0 1 0-2 0v6.517l-5.606 2.402a1 1 0 0 1-1.326-1.281l7-18A1 1 0 0 1 12 2Z" clip-rule="evenodd"/>
+                    </svg>
                 </button>
             </form>
         </div>
@@ -639,22 +694,29 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <h3 class="text-xl font-bold mb-6">InfographicPro</h3>
+                    <h3 class="text-xl font-bold mb-6">KVV Design</h3>
                     <p class="text-gray-400">Профессиональный дизайн инфографики для маркетплейсов. Визуальные решения, которые увеличивают продажи.</p>
                 </div>
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Контакты</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start">
-                            <i class="fas fa-phone-alt text-blue-400 mt-1 mr-3"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+                            </svg>
                             <a href="tel:+79991234567" class="text-gray-400 hover:text-white transition">+7 (999) 123-45-67</a>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-envelope text-blue-400 mt-1 mr-3"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M10 12v1h4v-1m4 7H6a1 1 0 0 1-1-1V9h14v9a1 1 0 0 1-1 1ZM4 5h16a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/>
+                            </svg>
                             <a href="mailto:info@infographicpro.ru" class="text-gray-400 hover:text-white transition">info@infographicpro.ru</a>
                         </li>
                         <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-3"></i>
+                            <svg class="w-6 h-6 text-(--second-color)" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.8 13.938h-.011a7 7 0 1 0-11.464.144h-.016l.14.171c.1.127.2.251.3.371L12 21l5.13-6.248c.194-.209.374-.429.54-.659l.13-.155Z"/>
+                            </svg>
                             <span class="text-gray-400">Москва, ул. Примерная, 12</span>
                         </li>
                     </ul>
@@ -662,17 +724,17 @@
                 <div>
                     <h4 class="text-lg font-semibold mb-6">Соцсети</h4>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
-                            <i class="fab fa-telegram"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition">
+                            <img src="img/icons/telegram.svg" alt="Telegram icon" loading="lazy">
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
-                            <i class="fab fa-whatsapp"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition">
+                            <img src="img/icons/whatsapp.svg" alt="WhatsApp icon" loading="lazy">
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
-                            <i class="fab fa-behance"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition">
+                            <img src="img/icons/behance.svg" alt="Behance icon" loading="lazy">
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-(--second-color) transition">
-                            <i class="fab fa-instagram"></i>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white transition">
+                            <img src="img/icons/instagram.svg" alt="Instagram icon" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -696,7 +758,7 @@
             </div>
             
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 mb-4 md:mb-0">© 2023 InfographicPro. Все права защищены.</p>
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 KVV Design. Все права защищены.</p>
                 <div class="flex space-x-6">
                     <a href="#" class="text-gray-400 hover:text-white transition">Политика конфиденциальности</a>
                     <a href="#" class="text-gray-400 hover:text-white transition">Условия использования</a>
