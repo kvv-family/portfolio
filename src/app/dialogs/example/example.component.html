@@ -1,0 +1,14 @@
+<div>
+  <p-panelmenu [model]="items"></p-panelmenu>
+</div>
+
+@if (displayBasic) {
+  <p-galleria [value]="images" [(visible)]="displayBasic" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '50%' }" [numVisible]="9" [fullScreen]="true" [showItemNavigators]="true">
+      <ng-template #item let-item>
+          <img [src]="item.img" style="width: 100%; display: block;" alt="item.alt" />
+      </ng-template>
+      <ng-template #thumbnail let-item>
+          <img [src]="item.img" style="display: block;" alt="item.alt" />
+      </ng-template>
+  </p-galleria>
+}

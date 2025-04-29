@@ -1,0 +1,7 @@
+<p-carousel [value]="items" [numVisible]="1" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+  <ng-template let-product #item>
+    <div class="overflow-scroll rounded-lg h-[calc(100dvh-15rem)]">
+      <img [src]="product.image" [alt]="product.name" loading="lazy" />
+    </div>
+  </ng-template>
+</p-carousel>
