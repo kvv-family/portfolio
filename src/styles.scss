@@ -66,3 +66,8 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.p-galleria-prev-button, .p-galleria-next-button {
+  background-color: var(--second-color) !important;
+}
+
