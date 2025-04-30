@@ -21,7 +21,6 @@
               "base": "docs",
               "browser": ""
             },
-            "baseHref": "https://kvv-design.ru/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
