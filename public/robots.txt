@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /privacy
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /cgi-bin/
+Disallow: /ajax/
+Disallow: /tmp/
+
+Sitemap: https://kvv-design.ru/sitemap.xml
