@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { RichComponent } from '../../dialogs/rich/rich.component';
 import { Dialog } from 'primeng/dialog';
 import { ExampleComponent } from '../../dialogs/example/example.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [Dialog, RichComponent, ExampleComponent],
+  imports: [Dialog, RichComponent, ExampleComponent, CommonModule],
   templateUrl: './portfolio.component.html',
 })
 export class PortfolioComponent {
@@ -22,7 +23,6 @@ export class PortfolioComponent {
   }
 
   showPhotoDialog(event: Dialog) {
-    console.log(event);
     event.maximize();
   }
 }

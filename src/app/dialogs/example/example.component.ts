@@ -1,4 +1,4 @@
-import { Component, model, OnInit } from '@angular/core';
+import { Component, model, OnDestroy, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { GalleriaModule } from 'primeng/galleria';
@@ -10,11 +10,11 @@ import { DialogModule } from 'primeng/dialog';
   imports: [PanelMenuModule, GalleriaModule, DialogModule],
   templateUrl: './example.component.html',
 })
-export class ExampleComponent implements OnInit {
+export class ExampleComponent implements OnInit, OnDestroy {
   tab = 0;
   content = photos;
   items: MenuItem[] = [];
-  images = [];
+  images: string[] = [];
   displayBasic: boolean = false;
   displayDialog: boolean = false;
   titleDialog: string = '';
@@ -22,16 +22,27 @@ export class ExampleComponent implements OnInit {
   ngOnInit() {
     this.items = this.content.map((item) => ({
       label: item.title,
-      items: item.items.map((item) => ({
-        label: item.title,
-        command: () => this.activeItem(item),
+      title: item.name,
+      items: item.items.map((item2) => ({
+        label: item2.title,
+        command: () => this.activeItem(item, item2),
       })),
     }));
   }
 
-  activeItem(item: any) {
+  ngOnDestroy(): void {
+    this.items = [];
+    this.images = [];
+  }
+
+  activeItem(base: any, item: any) {
     this.titleDialog = item.title;
-    this.images = item.photos;
+    let images: string[] = [];
+    for (let index = 0; index < item.photos.length; index++) {
+      const element = item.photos[index];
+      images.push(`img/examples/photos/${base.name}/${item.name}/${element}`);
+    }
+    this.images = images;
     this.displayBasic = true;
     this.displayDialog = true;
   }

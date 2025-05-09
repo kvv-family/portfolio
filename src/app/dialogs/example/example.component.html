@@ -4,6 +4,7 @@
 
 <p-dialog [header]="titleDialog" [(visible)]="displayDialog">
   <p-galleria
+    *ngIf="displayDialog"
     class="text-black"
     [value]="images"
     [numVisible]="2"
@@ -15,9 +16,8 @@
   >
     <ng-template #item let-item>
       <img
-        [src]="item.img"
+        [src]="item"
         style="max-width: 70%; display: block"
-        alt="item.alt"
       />
     </ng-template>
     <!-- <ng-template #thumbnail let-item>
