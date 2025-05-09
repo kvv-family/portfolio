@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+  --first-color: #021b79;
+  --first-color-opacity: #021c7994;
+  --second-color: #0575e6;
+  --second-color-opacity: #0576e641;
+}
+
+.contact-button {
+  background-color: var(--second-color);
+}
+
+.hero-gradient {
+  background: linear-gradient(to right, #021b79, #0575e6);
+}
+
+.portfolio-item {
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.tool-icon {
+  transition: all 0.3s ease;
+}
+
+.tool-icon:hover {
+  transform: scale(1.1);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.p-galleria-prev-button, .p-galleria-next-button {
+  background-color: var(--second-color) !important;
+}
+
