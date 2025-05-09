@@ -1,6 +1,6 @@
 export const photos = [
   {
-    title: 'Электроника',
+    title: 'Электроника и гаджеты',
     description: 'Электроника и гаджеты',
     name: 'elektronika_gadzhety',
     items: [
@@ -28,7 +28,7 @@ export const photos = [
     ],
   },
   {
-    title: 'Одежда',
+    title: 'Одежда, обувь, акссесуары',
     description: 'Одежда и обувь',
     name: 'odezhda_obuv_aksessuary',
     items: [
@@ -70,7 +70,7 @@ export const photos = [
     ],
   },
   {
-    title: 'Бьюти',
+    title: 'Бьюти и уход за собой',
     description: 'Бьюти и уход за собой',
     name: 'byuti_i_ukhod_za_soboy',
     items: [
@@ -127,7 +127,7 @@ export const photos = [
     ],
   },
   {
-    title: 'Уборка',
+    title: 'Бытовая химия и уборка',
     description: 'Уборка и бытовая химия',
     name: 'bytovaya_khimiya_i_uborka',
     items: [
@@ -149,7 +149,7 @@ export const photos = [
     ],
   },
   {
-    title: 'Спорт товары',
+    title: 'Спортивные товары',
     description: 'Спорт товары и аксессуары',
     name: 'sportivnyye_tovary',
     items: [
@@ -170,7 +170,7 @@ export const photos = [
     ],
   },
   {
-    title: 'Дом',
+    title: 'Дом и интерьер',
     description: 'Дом и интерьер',
     name: 'dom_i_interyer',
     items: [
