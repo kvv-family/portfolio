@@ -1,0 +1,36 @@
+server {
+
+    server_name kvv-design.ru 212.109.199.133;
+
+
+    location / {
+        root /var/www/portfolio/docs;
+        try_files $uri /index.html;
+        add_header Last-Modified $date_gmt;
+    }
+
+    listen [::]:443 ssl ipv6only=on; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/kvv-design.ru/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/kvv-design.ru/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
+}
+server {
+    listen 80;
+    listen [::]:80;
+    server_name kvv-design.ru 212.109.199.133;
+
+    location = /favicon.ico {
+        root /var/www/portfolio/docs;
+        access_log off;
+        log_not_found off;
+        expires max;
+    }
+    if ($host = kvv-design.ru ) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    return 404; # managed by Certbot
+}
